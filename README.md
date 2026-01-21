@@ -54,6 +54,7 @@ Example `composer.json`:
 `composer require composer/installers`
 
 `composer require palasthotel/central-autoloader`
+(Das geht gerade noch nicht. Aktuell muss die central-autoloader.php händisch in den mu-plugins Ordner gelegt werden)
 
 ### 3. Require plugins that got defined as repositories
 
