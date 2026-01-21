@@ -1,0 +1,5 @@
+{
+  "name": "palasthotel/central-autoloader",
+  "type": "wordpress-muplugin",
+  "require": {}
+}
