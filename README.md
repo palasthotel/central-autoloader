@@ -42,6 +42,7 @@ Example `composer.json`:
   "repositories": [
     { "type": "composer", "url": "https://repo.packagist.org" },
     { "type": "composer", "url": "https://wpackagist.org" },
+    { "type": "vcs", "url": "https://github.com/palasthotel/central-autoloader.git" }
     { "type": "vcs", "url": "https://github.com/palasthotel/pro-litteris.git" }
   ],
   "require": {}
