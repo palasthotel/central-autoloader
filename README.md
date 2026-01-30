@@ -64,7 +64,10 @@ Example `composer.json`:
 
 ## Setup for Plugins that should get loaded with the central autoloader
 
-### Put this at the beginning of the main plugin.php
+### plugin.php
+
+Put this at the beginning of the plugin.php:
+(COMPOSER_PACKAGE has to match the name defined in composer.json)
 
 ```json
 // composer package name is defined in plugins composer.json
@@ -103,5 +106,27 @@ if (defined('WP_DEBUG') && WP_DEBUG) {
         . ' classExists=' . (class_exists('\Composer\InstalledVersions', false) ? '1' : '0')
         . ' installPath=' . ($installPath ?? '(none)')
         . ' managed=' . ($managedByCentralAutoloader ? '1' : '0'));
+}
+```
+### composer.json
+
+- name is required (has to match COMPOSER_PACKAGE in plugin.php)
+- type has to be "wordpress-plugin"
+
+Example:
+
+```json
+{
+  "name": "palasthotel/pro-litteris",
+  "description": "Pro-Litteris WordPress plugin implementation.",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "Palasthotel\\ProLitteris\\": "classes/"
+    }
+  },
+  "require": {
+    "html2text/html2text": "^4.3"
+  }
 }
 ```
