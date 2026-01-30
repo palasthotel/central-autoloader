@@ -85,7 +85,7 @@ if ($centralAutoloader && class_exists('\Composer\InstalledVersions', true)) { /
         }
     } catch (\Throwable $e) {
         if (defined('WP_DEBUG') && WP_DEBUG) {
-            error_log('[ProLitteris] InstalledVersions exception: ' . $e->getMessage());
+            error_log('[' . COMPOSER_PACKAGE . '] InstalledVersions exception: ' . $e->getMessage());
         }
     }
 }
